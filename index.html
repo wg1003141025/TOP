@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<style>
+    section{
+        width: 1200px;
+        height: 1600px;
+        border: 1px solid red;
+        margin: 0 auto;
+    }
+    .top{
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: aqua;
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        font-size: 24px;
+        text-align: center;
+        line-height: 50px;
+        cursor: pointer;
+    }
+</style>
+<body>
+    <section></section>
+    <div class="top">TOP</div>
+</body>
+</html>
+<script>
+    var topp = document.querySelector('.top');
+//    console.log(topp);
+    topp.style.display = 'none';
+    window.onscroll = function(){
+        if(document.body.scrollTop > 150){
+            topp.style.display = 'block';
+        }else{
+            topp.style.display = 'none';
+        }
+    }
+    topp.onclick = function(){
+        window.scrollTo(0,0);
+    }
+</script>
